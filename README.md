@@ -9,3 +9,11 @@ crontab -e
 Then add the following line to run the script every hour:
 
 0 * * * * /path/to/monitoring.sh
+
+There is also a cleanup script that you can run once a day at midnight to clear out all logs older than three days, you can modify retention as needed
+
+crontab -e
+
+And add the following line to run the script daily at midnight:
+
+0 0 * * * /path/to/clear_old_logs.sh
